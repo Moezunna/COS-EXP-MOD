@@ -27,7 +27,7 @@
 
 # This will be the folder name under /magisk
 # This should also be the same as the id in your module.prop to prevent confusion
-MODID=COS-EXP-MOD
+MODID=Exp_Mod
 
 MINAPI=28
 #MAXAPI=30
