@@ -9,10 +9,11 @@ This module is a mixture of several modules that I saw one. Of course, I changed
 3. Done...
 
 ## SUPPORT
-Youtube Channel : https://www.youtube.com/channel/UCF8kyPa9m43vqwKsgX1PdTQ
+---Discord---------: https://top.gg/servers/840492676657840129
 
-Discord         : https://top.gg/servers/840492676657840129
+---Instagram-------: ---
 
-Instagram       : ---
+---Github----------: https://github.com/Moezuk
 
-Github          : https://github.com/Moezuk
+---Youtube Channel : https://www.youtube.com/channel/UCF8kyPa9m43vqwKsgX1PdTQ
+
