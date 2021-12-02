@@ -89,7 +89,7 @@ persist.sys.NV_FPSLIMIT=60
 persist.sys.NV_PROFVER=15
 persist.sys.NV_STEREOCTRL=0
 persist.sys.NV_STEREOSEPCHG=0
-persist.sys.NV_STEREOSEP=20
+persist.sys.NV_STEREOSEP=100
 persist.sys.purgeable_assets=1
 
 debug.enabletr=true
@@ -116,6 +116,7 @@ ro.media.codec_priority_for_thumb=so
 
 # IMAGE QUALITY
 ro.media.enc.jpeg.quality=100
+ro.media.enc.png.quality=100
 
 ro.media.panorama.defres=10800x2442
 ro.media.panorama.frameres=3264x1840

@@ -41,3 +41,4 @@ fi
 if [ ! -f /sys/class/qcom-battery/restricted_current.partb ]; then
   cp /sys/class/qcom-battery/restricted_current /sys/class/qcom-battery/restricted_current.partb
 fi
+
