@@ -72,6 +72,7 @@ print_modname() {
   ui_print "* -Audio    Set         *"
   ui_print "* -Boot     Set 60fps   *"
   ui_print "* -Dalvik   set         *"
+  ui_print "* -Device   set         *"
   ui_print "* -Display  Set         *"
   ui_print "* -Internet Set         *"
   ui_print "* -Picture  Set         *"

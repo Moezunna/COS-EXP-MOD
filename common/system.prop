@@ -176,10 +176,10 @@ ro.vendor.qti.core.ctl.min.cpu=4
 #196628 is decimal for 0x50000 to report major/minor versions as 5/0
 ro.opengles.version=327680
 
-# DEVICE COSTUM
-ro.build.version.sdk=30
-ro.build.version.release=12
-ro.build.type=Dev
+# DEVICE COSTUM not set
+#ro.build.version.sdk=30
+#ro.build.version.release=12
+#ro.build.type=Dev
 
 # MIUI VOICE CHANGE 
 ro.vendor.audio.voice.change.support=true
