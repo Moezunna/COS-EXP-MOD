@@ -1,7 +1,7 @@
 #=============================#
 # < NICKMOD = COS-EXP-MOD     #
 # < VERSION = In the filename #
-# < DATE = 29-11-2021         #
+# < DATE = 02-12-2021         #
 #=============================#
 
 # MOEZU DE ADIRA
@@ -169,7 +169,7 @@ wifi.supplicant_scan_interval=120
 
 # CPU Core
 ro.vendor.qti.core.ctl.max.cpu=8
-ro.vendor.qti.core.ctl.min.cpu=4
+ro.vendor.qti.core.ctl.min.cpu=0
 
 # OPEN GLES
 # OpenGLES version new update
