@@ -9,8 +9,9 @@
 This module is a mixture of several modules that I saw one. Of course, I changed this module so that it is not the same as someone else's :D.
 
 ## HOW TO INSTALL
-1. Instal busy box 
+1. Instal busy box. 
 2. After installing module busybox. You can install the COS-EXP-MOD module.
+4. Reboot.
 3. Done...
 
 ## SUPPORT
