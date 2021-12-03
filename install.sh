@@ -57,7 +57,7 @@ print_modname() {
   #Loading
   ui_print "Loading..."
   sleep 5
-  ui_print "Starting Instal"
+  ui_print " Starting Instal "
   #Start
   sleep 1
   ui_print " Light Tweak "
@@ -86,7 +86,7 @@ print_modname() {
   sleep 1
   ui_print " Light Therm Set Costum "
   sleep 3
-  ui_print " Set thermal mod for redmi 8 Olive"
+  ui_print " Set thermal mod for redmi 8 Olive "
   sleep 1
   ui_print " Open Gl 5.0 "
   sleep 3
@@ -190,7 +190,6 @@ set_permissions() {
   set_perm  $MODPATH/system/bin/daemon 0 0 0755
 
   # The following is default permissions, DO NOT remove
-  set_perm_recursive  $MODPATH  0  0  0755  0644
   set_perm  $MODPATH/system/vendor/etc/thermal-engine.conf  0  0  0644
   set_perm  $MODPATH/system/etc/thermal-engine.conf  0  0  0644
   set_perm  $MODPATH/system/etc/doublepowwer  0  0  0755
