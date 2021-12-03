@@ -70,14 +70,14 @@ print_modname() {
   ui_print "************************"
   ui_print "* Tweak Costum By MoeZu *"
   ui_print "* -Audio    Set         *"
-  ui_print "* -Boot     Set 60fps   *"
-  ui_print "* -Dalvik   set         *"
-  ui_print "* -Device   set         *"
-  ui_print "* -Display  Set         *"
-  ui_print "* -Internet Set         *"
-  ui_print "* -Picture  Set         *"
+  ui_print "* -Boot     not         *"
+  ui_print "* -Dalvik   not         *"
+  ui_print "* -Device   not         *"
+  ui_print "* -Display  not         *"
+  ui_print "* -Internet not         *"
+  ui_print "* -Picture  not         *"
   ui_print "* -Sound    Set         *"
-  ui_print "* -Touch    Set         *"
+  ui_print "* -Touch    not         *"
   ui_print "************************"
   sleep 1
   ui_print " Zram Upping D0 4GB + D1 1GB + D2 1GB "
@@ -90,6 +90,8 @@ print_modname() {
   ui_print "************************"
   sleep 1
   ui_print " Light Therm Set Costum "
+  sleep 3
+  ui_print " Set thermal mod for redmi 8 Olive"
   sleep 1
   ui_print " Open Gl 5.0 "
   sleep 3
