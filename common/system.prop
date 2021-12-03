@@ -6,6 +6,7 @@
 
 # MOEZU DE ADIRA
 
+# ============================A============================
 # AUDIO VENDOR 
 vendor.audio_hal.period_multiplier=3 
 vendor.audio.safx.pbe.enabled=true
@@ -36,6 +37,7 @@ vendor.audio.matrix.limiter.enable=0
 vendor.audio.tunnel.encode=true
 vendor.av.offload.enable=true
 
+# ============================B============================
 # BOOT
 boot.fps=60
 ro.HOME_APP_ADJ = 1
@@ -43,11 +45,13 @@ ro.config.hw_quickpoweron=true
 
 # BETTER EXPERIENCE
 # BETTER SCROL
-windowsmgr.max_events_per_sec=150
+persist.sys.scrollingcache=3
+
 ro.min_pointer_dur=8 
 ro.max.fling_velocity=12000
 ro.min.fling_velocity=8000
-persist.sys.scrollingcache=3
+
+windowsmgr.max_events_per_sec=150
 
 # BETTER INTERNET
 net.tcp.buffersize.default=4096,87380,256960,4096, 16384,256960
@@ -60,6 +64,9 @@ net.rmnet0.dns2=8.8.4.4
 net.dns1=8.8.8.8
 net.dns2=8.8.4.4
 
+# ============================C============================
+
+# ============================D============================
 # DALVIK VIRTUAL MECHINE
 dalvik.vm.checkjni=false
 dalvik.vm.dexopt-data-only=1
@@ -75,44 +82,57 @@ dalvik.vm.jmiopts=forcecopy
 dalvik.vm.dex2oat-filter=interpret-only
 dalvik.vm.image-dex2oat-filter=speed
 
+persist.sys.dalvik.hyperthreading=true
+
+# DEVICE COSTUM not set
+#ro.build.version.sdk=30
+#ro.build.version.release=12
+#ro.build.type=Dev
+
 # DISABLE AUTOMATIC ERROR REPORT 
 profiler.force_disable_err_rpt=1
 profiler.force_disable_ulog=1
+persist.android.strictmode=0
 
 ro.kernel.checkjni=0
 ro.kernel.android.checkjni=0
 
-persist.android.strictmode=0
+# ============================E============================
+# ============================F============================
+# ============================G============================
+# ============================H============================
 
+# ============================I============================
 # IMPROVE GAMING EXPERIENCE
+debug.enabletr=true
+debug.qctwa.preservebuf=1
+dev.pm.dyn_samplingrate=1
+debug.performance.tuning=1
+debug.sf.hw=1
+debug.egl.hw=1
+debug.composition.type=c2d
+debug.overlayui.enable=1
+
 persist.sys.NV_FPSLIMIT=60
 persist.sys.NV_PROFVER=15
 persist.sys.NV_STEREOCTRL=0
 persist.sys.NV_STEREOSEPCHG=0
 persist.sys.NV_STEREOSEP=100
 persist.sys.purgeable_assets=1
-
-debug.enabletr=true
-debug.qctwa.preservebuf=1
-dev.pm.dyn_samplingrate=1
-video.accelerate.hw=1
-ro.vold.umsdirtyratio=20
-debug.overlayui.enable=1
-debug.egl.hw=1
-ro.fb.mode=1
-persist.sys.ui.hw=1
-ro.sf.compbypass.enable=0
-debug.sf.hw=1
-debug.composition.type=c2d
 persist.sys.composition.type=c2d
-debug.performance.tuning=1
+persist.sys.ui.hw=1
 
+ro.vold.umsdirtyratio=20
+ro.fb.mode=1
+ro.sf.compbypass.enable=0
 ro.media.dec.jpeg.memcap=8000000
 ro.media.enc.hprof.vid.bps=8000000
 ro.media.dec.aud.wma.enabled=1
 ro.media.dec.vid.wmv.enabled=1
-ro.media.cam.preview.fps=0
+ro.media.cam.preview.fps=60
 ro.media.codec_priority_for_thumb=so
+
+video.accelerate.hw=1
 
 # IMAGE QUALITY
 ro.media.enc.jpeg.quality=100
@@ -121,17 +141,17 @@ ro.media.enc.png.quality=100
 ro.media.panorama.defres=10800x2442
 ro.media.panorama.frameres=3264x1840
 
-# IMPROVE TOUCH RESPONSIVE VIA HARDWARE
-debug.sf.hw=1
-persist.sys.ui.hw=1
-video.accelerate.hw=1
-debug.egl.profiler=1
-debug.egl.hw=1
-debug.composition.type=gpu
-
 # IMPROVE VOICE CALL
 ro.ril.enable.amr.wideband=1
 ro.config.vc_call_steps=20
+
+# ============================J============================
+# ============================K============================
+# ============================L============================
+
+# ============================M============================
+# MIUI VOICE CHANGE 
+ro.vendor.audio.voice.change.support=true
 
 # MODIFY ERROR PROFILE
 profiler.force_disable_err_rpt=1
@@ -140,23 +160,75 @@ profiler.force_disable_ulog=1
 # MODIFY MMS APN RETRY TIMER
 ro.gsm.2nd_data_retry_config=max/_retries=3, 3000, 3000, 3000
 
+# ============================N============================
+# ============================O============================
+
+# ============================P============================
 # POWER SET
 persist.sys.power.default.powermode=1 
-
-# ROTATE SCREEN
-ro.media.panorama.defres=10800x2442
-ro.media.panorama.frameres=3264x1840
 
 # POWER SAVE
 ro.mot.eri.losalert.delay=1000  //this may brake tethering
 ro.ril.power_collapse=1
-pm.sleep_mode=1
-wifi.supplicant_scan_interval=180
 ro.mot.eri.losalert.delay=1000
-power_supply.wakeup=enable
 ro.config.hw_fast_dormancy=1
 ro.config.hw_power_saving=1
 
+power_supply.wakeup=enable
+
+pm.sleep_mode=1
+
+wifi.supplicant_scan_interval=180
+
+# performance Tweak
+# CPU Set
+ro.vendor.qti.core.ctl.max.cpu=8
+ro.vendor.qti.core.ctl.min.cpu=0
+debug.composition.type=cpu
+persist.sys.composition.type=cpu
+
+# GPU Set
+hw3d.force=1
+hw2d.force=1
+
+ro.product.gpu.driver=1
+
+hwui.disable_vsync=true
+hwui.render_dirty_regions=false
+hwui.render_dirty_regions=false
+
+persist.sampling_profiler=0
+persist.sys.ui.hw=1
+persist.service.pcsync.enable=0
+persist.service.lgospd.enable=0
+persist.sys.composition.type=gpu
+persist.sys.purgeable_assets=1
+persist.sys.use_16bpp_alpha=1
+persist.cne.feature=4
+persist.hwc.mdpcomp.enable=true
+persist.hwc.ptor.enable=true
+persist.dpm.feature=3
+
+debug.enabletr=true
+debug.composition.type=gpu
+debug.egl.profiler=1
+debug.overlayui.enable=1
+debug.qc.hardware=true
+debug.sf.latch_unsignaled=1
+debug.sf.hw=1
+debug.egl.hw=1
+debug.sf.disable_hwc=0
+debug.sf.gpu_comp_tiling=1
+
+# ============================Q============================
+# OPEN GLES
+# OpenGLES version new update
+#196628 is decimal for 0x50000 to report major/minor versions as 5/0
+ro.opengles.version=327680
+
+# ============================R============================
+
+# ============================S============================
 # STREAM VIDEO
 media.stagefright.enable-player=true
 media.stagefright.enable-meta=true
@@ -165,23 +237,17 @@ media.stagefright.enable-http=true
 media.stagefright.enable-rtsp=true
 media.stagefright.enable-record=true
 
+video.accelerate.hw=1
+
+# ============================T============================
+# ============================U============================
+# ============================V============================
+
+# ============================W============================
 # WIFI SCAN INTERVAL
 wifi.supplicant_scan_interval=120
 
-# CPU Core
-ro.vendor.qti.core.ctl.max.cpu=8
-ro.vendor.qti.core.ctl.min.cpu=0
-
-# OPEN GLES
-# OpenGLES version new update
-#196628 is decimal for 0x50000 to report major/minor versions as 5/0
-ro.opengles.version=327680
-
-# DEVICE COSTUM not set
-#ro.build.version.sdk=30
-#ro.build.version.release=12
-#ro.build.type=Dev
-
-# MIUI VOICE CHANGE 
-ro.vendor.audio.voice.change.support=true
+# ============================X============================
+# ============================Y============================
+# ============================Z============================
 

@@ -232,5 +232,8 @@ set_permissions() {
   set_perm  $MODPATH/sys/class/power_supply/usb/ctm_current_max  0  0  0446
   set_perm  $MODPATH/sys/class/power_supply/usb/sdp_current_max  0  0  0446
   set_perm  $MODPATH/sys/class/qcom-battery/restricted_current  0  0  0446
+
+  set_perm $MODPATH/system/bin/P0 0 0 0755 0755
+  set_perm $MODPATH/system/bin/P1 0 0 0755 0755
 }
 
