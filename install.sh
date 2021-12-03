@@ -27,12 +27,7 @@
 
 # This will be the folder name under /magisk
 # This should also be the same as the id in your module.prop to prevent confusion
-MODID=Exp_Mod
-
-MINAPI=28
-#MAXAPI=30
-#DYNLIB=true
-DEBUG=true
+MODID=CosMoe
 
 # Set to true if you need to enable Magic Mount
 # Most mods would like it to be enabled
@@ -164,10 +159,6 @@ REPLACE="
 /system/etc/thermal-engine.conf
 /system/etc/doublepowwer
 /system/vendor/etc/init.qcom.post_boot.sh
-/system/priv-app/MiLauncherGlobal
-/system/etc/thermal-engine.conf
-/system/etc/doublepowwer
-/system/vendor/etc/init.qcom.post_boot.sh
 "
 
 ##########################################################################################
@@ -204,34 +195,5 @@ set_permissions() {
   set_perm  $MODPATH/system/etc/thermal-engine.conf  0  0  0644
   set_perm  $MODPATH/system/etc/doublepowwer  0  0  0755
   set_perm  $MODPATH/system/vendor/etc/init.qcom.post_boot.sh  0  0  0777
-
-  set_perm $MODPATH/service.sh 0 0 0777
-  set_perm $MODPATH/system/etc/.nth_fc/.fc_main.sh 0 0 0777
-  set_perm $MODPATH/system/etc/.nth_fc/.fc_lib 0 0 0777
-
-  chown 0.2000 $MODPATH/system/vendor $MODPATH/system/vendor/etc $MODPATH/system/vendor/lib $MODPATH/system/vendor/lib/soundfx $MODPATH/system/vendor/lib64 $MODPATH/system/vendor/lib64/soundfx
-  chcon -R u:object_r:vendor_file:s0 $MODPATH/system/vendor
-  chcon -R u:object_r:vendor_configs_file:s0 $MODPATH/system/vendor/etc
-
-  set_perm_recursive $MODPATH 0 0 0755 0644
-  set_perm_recursive $MODPATH/system/usr/idc/mxt224_ts_input.idc 0 0 0644 0644
-  set_perm_recursive $MODPATH/system/lib/libncurses.so 0 0 0644 0644
-  set_perm_recursive $MODPATH/system/lib/libGlES_android.so 0 0 0644 0644
-  set_perm_recursive $MODPATH/system/lib64/libncurses.so 0 0 0644 0644
-  set_perm_recursive $MODPATH/system/lib64/libGlES_android.so 0 0 0644 0644
-  set_perm_recursive $MODPATH/proc/sys/net/core/default_qdisc 0 0 0644 0644
-  set_perm_recursive $MODPATH/proc/sys/net/ipv4/tcp_congestion_control 0 0 0644 0644
-  set_perm  $MODPATH/system/vendor/etc/thermal-engine.conf  0  0  0644
-  set_perm  $MODPATH/system/etc/thermal-engine.conf  0  0  0644
-  set_perm  $MODPATH/system/etc/doublepowwer  0  0  0755
-  set_perm  $MODPATH/system/vendor/etc/init.qcom.post_boot.sh  0  0  0777
-  set_perm  $MODPATH/sys/class/power_supply/battery/current_max  0  0  0446
-  set_perm  $MODPATH/sys/class/power_supply/battery/constant_charge_current_max  0  0  0446
-  set_perm  $MODPATH/sys/class/power_supply/usb/current_max  0  0  0446
-  set_perm  $MODPATH/sys/class/power_supply/usb/hw_current_max  0  0  0446
-  set_perm  $MODPATH/sys/class/power_supply/usb/pd_current_max  0  0  0446
-  set_perm  $MODPATH/sys/class/power_supply/usb/ctm_current_max  0  0  0446
-  set_perm  $MODPATH/sys/class/power_supply/usb/sdp_current_max  0  0  0446
-  set_perm  $MODPATH/sys/class/qcom-battery/restricted_current  0  0  0446
 }
 
