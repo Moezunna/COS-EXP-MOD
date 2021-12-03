@@ -26,12 +26,8 @@ vendor.audio.hw.aac.encoder=true
 vendor.audio.effect.a2dp.enable=1
 vendor.btstack.absolute_volume=true
 vendor.bt.pts.pbap=true
-vendor.audio.playback.mch.downsample=false
+vendor.audio.playback.mch.downsample=true
 vendor.audio.matrix.limiter.enable=0
 vendor.audio.tunnel.encode=true
 vendor.av.offload.enable=true
-
-# PERFORMANCE
-hw2d=1
-hw3d=1
 
