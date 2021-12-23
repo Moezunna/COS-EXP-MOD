@@ -11,12 +11,6 @@
 MODDIR=${0%/*}
 
 #----------------
-#Fast Charge
-#!/system/bin/sh
-sh /system/etc/.nth_fc/.fc_main.sh
-#----------------
-
-#----------------
 #improve
 ext() 
 {
@@ -27,8 +21,6 @@ ext()
     fi
 }
 #----------------
-
-ext 5500000 /sys/class/power_supply/battery/constant_charge_current_max
 
 #----------------
 #Zram
