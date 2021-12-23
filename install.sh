@@ -47,6 +47,7 @@ LATESTARTSERVICE=true
 ##########################################################################################
 
 # Set what you want to show when installing your mod
+
 print_modname() {
   ui_print "۩▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬۩"
   sleep 0
@@ -62,7 +63,7 @@ print_modname() {
   ui_print " name=$MODNAME                       "
   ui_print " MagiskVersion=$MAGISK_VER           "
   ui_print " MagiskVersionCode=$MAGISK_VER_CODE  "
-  ui_print " Module_Verison=v0.4.0               "
+  ui_print " Module_Verison=v0.4.0 For Olive     "
   ui_print "*************************************"
   ui_print " "
   sleep 5
@@ -118,20 +119,9 @@ echo "After Install Check Your Opengl"
 echo "After Install Check Your Sensor"
 echo "After Install Check Your Zram"
 echo " "
-sleep 5
-echo "Installation Completed"
-echo " "
-sleep 3
-ui_print "Reboot For Perfect Completed!!"
-}
-
-# Copy/extract your module files into $MODPATH in on_install.
-
-on_install() {
-  # The following is the default implementation: extract $ZIPFILE/system to $MODPATH
-  # Extend/change the logic to whatever you want
   ui_print "- Extracting module files"
   unzip -o "$ZIPFILE" 'system/*' -d $MODPATH >&2
+  sleep 3
   rm -rf /data/resource-cache/*
   rm -rf /data/system/package_cache/*
   rm -rf /cache/*
@@ -141,6 +131,11 @@ on_install() {
   su -c  cmd settings put system deviceLevelList v:3,c:3,g:3
   ui_print "- Enable blur"
   ui_print "Done!"
+sleep 5
+echo "Installation Completed"
+echo " "
+sleep 3
+ui_print "Reboot For Perfect Completed!!"
 }
 
 ##########################################################################################
@@ -163,23 +158,15 @@ REPLACE="
 # Construct your own list here, it will overwrite the example
 # !DO NOT! remove this if you don't need to replace anything, leave it empty as it is now
 REPLACE="
-/system/app/AnalyticsCore
-/system/app/MSA-CN-NO_INSTALL_PACKAGE
-/system/app/mab
-/system/app/MSA
-/system/app/MSA-Global
-/system/app/Stk
-/system/etc/cust
-/system/data-app
-/system/priv-app/MiGameCenterSDKService
-/system/vendor/overlay/SysuiDarkTheme
-/system/vendor/overlay/DisplayCutoutEmulationTall
-/system/vendor/overlay/DisplayCutoutEmulationDouble
-/system/vendor/overlay/DisplayCutoutEmulationCorner
-/system/vendor/etc/thermal-engine.conf
-/system/etc/thermal-engine.conf
-/system/etc/doublepowwer
+/system/vendor/etc/apdr.conf
 /system/vendor/etc/init.qcom.post_boot.sh
+/system/vendor/etc/thermal-engine-camera.conf
+/system/vendor/etc/thermal-engine-high.conf
+/system/vendor/etc/thermal-engine-map.conf
+/system/vendor/etc/thermal-engine-nolimits.conf
+/system/vendor/etc/thermal-engine-normal.conf
+/system/vendor/etc/thermal-engine-sgame.conf
+/system/vendor/etc/thermal-engine.conf
 "
 
 ##########################################################################################
@@ -191,11 +178,19 @@ REPLACE="
 set_permissions() {
   # Default permissions, don't remove them
   set_perm_recursive  $MODPATH  0  0  0755  0644
-  set_perm_recursive $MODPATH/system/bin 0 0 0755 0755
-  set_perm $MODPATH/system/lib/egl/egl.cfg 0 0 0644
-  set_perm_recursive $MODPATH/system/etc 0 0 0755 0644
+
+  # Permis Thermal
+  set_perm_recursive $MODPATH/system/vendor/etc 0 0 0755 0644
+  set_perm_recursive $MODPATH/System/vendor/etc/apdr.conf 0 0 0755 0644
+  set_perm_recursive $MODPATH/System/vendor/etc/init.qcom.post_boot.sh 0 0 0755 0644
+  set_perm_recursive $MODPATH/System/vendor/etc/thermal-engine-camera.conf 0 0 0755 0644
+  set_perm_recursive $MODPATH/System/vendor/etc/thermal-engine-high.conf 0 0 0755 0644
+  set_perm_recursive $MODPATH/System/vendor/etc/thermal-engine-map.conf 0 0 0755 0644
+  set_perm_recursive $MODPATH/System/vendor/etc/thermal-engine-nolimits.conf 0 0 0755 0644
   set_perm_recursive $MODPATH/System/vendor/etc/thermal-engine-normal.conf 0 0 0755 0644
-  set_perm_recursive $MODPATH/System/lib/GL-Extensions 0 0 0755 0644
+  set_perm_recursive $MODPATH/System/vendor/etc/thermal-engine-sgame.conf 0 0 0755 0644
+  set_perm_recursive $MODPATH/System/vendor/etc/thermal-engine.conf 0 0 0755 0644
+
   # Only some special files require specific permissions
   # The default permissions should be good enough for most cases
 
@@ -208,12 +203,4 @@ set_permissions() {
   # set_perm  $MODPATH/system/bin/app_process32   0       2000    0755         u:object_r:zygote_exec:s0
   # set_perm  $MODPATH/system/bin/dex2oat         0       2000    0755         u:object_r:dex2oat_exec:s0
   # set_perm  $MODPATH/system/lib/libart.so       0       0       0644
-  set_perm  $MODPATH/system/bin/daemon 0 0 0755
-
-  # The following is default permissions, DO NOT remove
-  set_perm  $MODPATH/system/vendor/etc/thermal-engine.conf  0  0  0644
-  set_perm  $MODPATH/system/etc/thermal-engine.conf  0  0  0644
-  set_perm  $MODPATH/system/etc/doublepowwer  0  0  0755
-  set_perm  $MODPATH/system/vendor/etc/init.qcom.post_boot.sh  0  0  0777
 }
-
