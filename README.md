@@ -17,7 +17,7 @@ This module is a mixture of several modules that I saw one. Of course, I changed
 ## SUPPORT
 ---Discord-----------: https://top.gg/servers/840492676657840129
 
----Instagram--------: ---
+---Instagram--------: https://www.instagram.com/moe_zuk/
 
 ---Github------------: https://github.com/Moezuk
 
