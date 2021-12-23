@@ -12,7 +12,7 @@ This module is a mixture of several modules that I saw one. Of course, I changed
 1. Instal busy box. 
 2. After installing module busybox. You can install the COS-EXP-MOD module.
 4. Reboot.
-3. Done...
+5. Done...
 
 ## SUPPORT
 ---Discord-----------: https://top.gg/servers/840492676657840129

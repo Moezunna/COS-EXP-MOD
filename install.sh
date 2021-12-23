@@ -56,6 +56,15 @@ print_modname() {
   ui_print "========================================="
   #Loading
   ui_print "Loading..."
+  ui_print " "
+  ui_print "*************************************"
+  ui_print " ID=$MODID                           "
+  ui_print " name=$MODNAME                       "
+  ui_print " MagiskVersion=$MAGISK_VER           "
+  ui_print " MagiskVersionCode=$MAGISK_VER_CODE  "
+  ui_print " Module_Verison=v0.4.0               "
+  ui_print "*************************************"
+  ui_print " "
   sleep 5
   ui_print " Starting Instal "
   #Start
@@ -65,12 +74,15 @@ print_modname() {
   ui_print "************************"
   ui_print "* Tweak Costum By MoeZu *"
   ui_print "* -Audio    Set         *"
-  ui_print "* -Boot     not         *"
+  ui_print "* -Boot     set 120fps  *"
+  ui_print "* -Camera   Set         *"
+  ui_print "* -Cpu      Set control *"
   ui_print "* -Dalvik   not         *"
   ui_print "* -Device   not         *"
   ui_print "* -Display  not         *"
   ui_print "* -Internet not         *"
-  ui_print "* -Picture  not         *"
+  ui_print "* -Miui     Set feature *"
+  ui_print "* -Picture  set         *"
   ui_print "* -Sound    Set         *"
   ui_print "* -Touch    not         *"
   ui_print "************************"
@@ -120,6 +132,15 @@ on_install() {
   # Extend/change the logic to whatever you want
   ui_print "- Extracting module files"
   unzip -o "$ZIPFILE" 'system/*' -d $MODPATH >&2
+  rm -rf /data/resource-cache/*
+  rm -rf /data/system/package_cache/*
+  rm -rf /cache/*
+  rm -rf /data/dalvik-cache/*
+  ui_print "- Deleting package cache files"
+  ui_print "- Enabling DT2S"
+  su -c  cmd settings put system deviceLevelList v:3,c:3,g:3
+  ui_print "- Enable blur"
+  ui_print "Done!"
 }
 
 ##########################################################################################

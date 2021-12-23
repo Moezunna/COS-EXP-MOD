@@ -1,9 +1,9 @@
 id=Exp_Mod
 name=¤¤ 🤖COS-EXP-MOD🤖 ¤¤
-version=v0.4.0 Stable
+version=v0.4.0
 versionCode=1
 author=MoeZu
-support=https://www.youtube.com/channel/UCF8kyPa9m43vqwKsgX1PdTQ
-description=Optimaly Redmi 8 Module {Support All Devices (This Module Costum)}
+support=https://www.youtube.com/channel/UCF8kyPa9m43vqwKsgX1PdTQ,https://github.com/Moezuk
+description=Optimaly Module {Support All Devices (This Module Costum)}
 minMagisk=20000
 

@@ -1,7 +1,7 @@
 #=============================#
 # < NICKMOD = COS-EXP-MOD     #
 # < VERSION = In the filename #
-# < DATE = 03-12-2021         #
+# < DATE = 23-12-2021         #
 #=============================#
 
 # AUDIO
@@ -18,9 +18,9 @@ vendor.audio.use.sw.alac.decoder=true
 vendor.audio.flac.sw.encoder.24bit=true
 vendor.audio.aac.sw.encoder.24bit=true
 vendor.audio.use.sw.ape.decoder=true
-vendor.audio.vorbis.complexity.default=8
+vendor.audio.vorbis.complexity.default=100
 vendor.audio.vorbis.quality=100
-vendor.audio.aac.complexity.default=8
+vendor.audio.aac.complexity.default=100
 vendor.audio.aac.quality=100
 vendor.audio.hw.aac.encoder=true
 vendor.audio.effect.a2dp.enable=1
@@ -30,4 +30,32 @@ vendor.audio.playback.mch.downsample=true
 vendor.audio.matrix.limiter.enable=0
 vendor.audio.tunnel.encode=true
 vendor.av.offload.enable=true
+
+# CPU
+ro.vendor.qti.core.ctl.max.cpu=8
+ro.vendor.qti.core.ctl.min.cpu=1
+
+# IMPROVING
+# Improving jpeg quality
+ro.media.enc.jpeg.quality=100
+ro.media.enc.png.quality=100
+
+# Improving boot time
+boot.fps=120
+
+# MIUI Feature
+# Power Changer
+persist.sys.power.default.powermode=1
+
+# Camera Changer
+persist.camera.eis.enable=1
+
+# Voice Changer 
+ro.vendor.audio.voice.change.support=true
+
+# OpenGLES version new update
+#196628 is decimal for 0x50000 to report major/minor versions as 5/0
+ro.opengles.version=327680
+
+sys.display-size=3840x2160
 
