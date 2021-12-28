@@ -63,7 +63,7 @@ print_modname() {
   ui_print " name=$MODNAME                       "
   ui_print " MagiskVersion=$MAGISK_VER           "
   ui_print " MagiskVersionCode=$MAGISK_VER_CODE  "
-  ui_print " Module_Verison=v0.4.0 For Olive     "
+  ui_print " Module_Verison=v0.4.0               "
   ui_print "*************************************"
   ui_print " "
   sleep 5
@@ -75,7 +75,7 @@ print_modname() {
   ui_print "************************"
   ui_print "* Tweak Costum By MoeZu *"
   ui_print "* -Audio    Set         *"
-  ui_print "* -Boot     set 120fps  *"
+  ui_print "* -Boot     set  60fps  *"
   ui_print "* -Camera   Set         *"
   ui_print "* -Cpu      Set control *"
   ui_print "* -Dalvik   not         *"

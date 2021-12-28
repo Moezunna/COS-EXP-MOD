@@ -46,7 +46,7 @@ ro.media.enc.jpeg.quality=100
 ro.media.enc.png.quality=100
 
 # Improving boot time
-boot.fps=120
+boot.fps=60
 
 # MIUI Feature
 # Power Changer
