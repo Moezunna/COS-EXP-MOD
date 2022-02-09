@@ -1,9 +1,9 @@
-id=Exp_Mod
+id=RED8
 name=¤¤ 🤖COS-EXP-MOD🤖 ¤¤
-version=v0.4.0
+version=v0.0.1
 versionCode=1
 author=MoeZu
 support=https://www.youtube.com/channel/UCF8kyPa9m43vqwKsgX1PdTQ
-description=Optimaly Module {Support All Devices (This Module Costum)}
-minMagisk=20000
+description=Optimaly Module For redmi 8 {(This Module Costum)}
+minMagisk=23000
 
