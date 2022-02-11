@@ -78,17 +78,18 @@ print_modname() {
   ui_print "* -Boot     set  60fps  *"
   ui_print "* -Camera   Set         *"
   ui_print "* -Cpu      Set control *"
-  ui_print "* -Dalvik   not         *"
+  ui_print "* -Dalvik   Set         *"
   ui_print "* -Device   not         *"
   ui_print "* -Display  not         *"
   ui_print "* -Internet not         *"
   ui_print "* -Miui     Set feature *"
   ui_print "* -Picture  set         *"
-  ui_print "* -Sound    Set         *"
+  ui_print "* -Sound    Set   best  *"
   ui_print "* -Touch    not         *"
   ui_print "************************"
   sleep 1
   ui_print " Zram Upping D0 4GB + D1 1GB + D2 1GB "
+  ui_print " Zram work on costum rom"
   sleep 3
   ui_print "************************"
   ui_print "* -Zram Costum By MoeZu *"
@@ -159,7 +160,6 @@ REPLACE="
 # !DO NOT! remove this if you don't need to replace anything, leave it empty as it is now
 REPLACE="
 /system/vendor/etc/gps.conf
-/system/vendor/etc/init.qcom.post_boot.sh
 /system/vendor/etc/thermal-engine-camera.conf
 /system/vendor/etc/thermal-engine-high.conf
 /system/vendor/etc/thermal-engine-map.conf
@@ -184,7 +184,6 @@ set_permissions() {
   # Permis Thermal
   set_perm_recursive $MODPATH/system/vendor/etc 0 0 0755 0644
   set_perm_recursive $MODPATH/System/vendor/etc/apdr.conf 0 0 0755 0644
-  set_perm_recursive $MODPATH/System/vendor/etc/init.qcom.post_boot.sh 0 0 0755 0644
   set_perm_recursive $MODPATH/System/vendor/etc/thermal-engine-camera.conf 0 0 0755 0644
   set_perm_recursive $MODPATH/System/vendor/etc/thermal-engine-high.conf 0 0 0755 0644
   set_perm_recursive $MODPATH/System/vendor/etc/thermal-engine-map.conf 0 0 0755 0644
