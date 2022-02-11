@@ -74,11 +74,11 @@ print_modname() {
   sleep 3
   ui_print "************************"
   ui_print "* Tweak Costum By MoeZu *"
-  ui_print "* -Audio    Set         *"
-  ui_print "* -Boot     set  60fps  *"
+  ui_print "* -Audio    Set   best  *"
+  ui_print "* -Boot     not         *"
   ui_print "* -Camera   Set         *"
   ui_print "* -Cpu      Set control *"
-  ui_print "* -Dalvik   Set         *"
+  ui_print "* -Dalvik   not         *"
   ui_print "* -Device   not         *"
   ui_print "* -Display  not         *"
   ui_print "* -Internet not         *"
@@ -100,7 +100,7 @@ print_modname() {
   sleep 1
   ui_print " Light Therm Set Costum "
   sleep 3
-  ui_print " Set thermal mod for redmi 8 Olive "
+  ui_print " Set thermal mod for Snapdragon 439 "
   sleep 1
   ui_print " Open Gl 5.0 "
   sleep 3

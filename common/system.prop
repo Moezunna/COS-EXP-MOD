@@ -142,12 +142,8 @@ ro.vendor.qti.core.ctl.max.cpu=8
 ro.vendor.qti.core.ctl.min.cpu=1
 
 # IMPROVING
-# Improving jpeg quality
-ro.media.enc.jpeg.quality=100
-ro.media.enc.png.quality=100
-
 # Improving boot time
-boot.fps=60
+#boot.fps=60
 
 # MIUI Feature
 # Power Changer
@@ -257,10 +253,4 @@ htc.audio.global.profile=0
 htc.audio.q6.topology=0
 htc.audio.enable_dmic=1
 persist.htc.audio.pcm.channels=2
-
-#ViPER4Android Build.prop Tweaks
-lpa.decode=false
-lpa.releaselock=false
-lpa.use-stagefright=false
-tunnel.decode=false
 
