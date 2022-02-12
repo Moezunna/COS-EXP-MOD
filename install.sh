@@ -89,7 +89,7 @@ print_modname() {
   ui_print "* -Touch    not         *"
   ui_print "************************"
   sleep 1
-  ui_print " Zram Upping D0 4GB + D1 1GB + D2 1GB "
+  ui_print " Zram Upping D0 4GB + D1 4GB + D2 4GB "
   ui_print " Zram work on costum rom"
   sleep 3
   ui_print "************************"
@@ -139,13 +139,6 @@ echo " "
 sleep 3
 ui_print "Reboot For Perfect Completed!!"
 }
-
-CHECK() {
-D=$(getprop ro.product.device 2>/dev/null)
-P=$(getprop ro.build.product 2>/dev/null)
-VD=$(getprop ro.product.vendor.device 2>/dev/null)
-VP=$(getprop ro.vendor.product.device 2>/dev/null)
-DN=olive
 
 ##########################################################################################
 # Replace list

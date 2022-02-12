@@ -55,17 +55,17 @@ echo 'N' > /sys/module/sync/parameters/fsync_enabled
 
 # Zram add (Work on costum room)
 sleep 15
-echo '4096' >/sys/block/zram0/disksize
+echo 4096 >/sys/block/zram0/disksize
 mkswap /dev/block/zram0
 swapon /dev/block/zram0
 
 sleep 15
-echo '4096' >/sys/block/zram1/disksize
+echo 4096 >/sys/block/zram1/disksize
 mkswap /dev/block/zram1
 swapon /dev/block/zram1
 
 sleep 15
-echo '4096' >/sys/block/zram2/disksize
+echo 4096 >/sys/block/zram2/disksize
 mkswap /dev/block/zram2
 swapon /dev/block/zram2
 
