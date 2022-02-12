@@ -5,11 +5,6 @@ MODDIR=${0%/*}
 # < DATE = 12-02-2022         #
 #=============================#
 
-
-while [ `getprop vendor.post_boot.parsed` != "1" ]; do
-    sleep 1s
-done
-
 #improve
 ext() 
 {
