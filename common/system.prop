@@ -11,31 +11,11 @@ MODDIR=${0%/*}
 #=============================#
 
 # AUDIO
-media.stagefright.audio.sink=384
-af.fast.track.multiplier=2
-vendor.audio_hal.period_multiplier=3 
 audio.offload.buffer.size.kb=384
-vendor.mm.enable.qcom_parser=80255037
 persist.mm.enable.prefetch=true
-ro.af.client_heap_size_kbyte=7168
-ro.mediacodec.min_sample_rate=7350
-ro.mediacodec.max_sample_rate=2822400
-audio.sys.noisy.broadcast.delay=600
-audio.sys.offload.pstimeout.secs=3 
 audio.volume.headset.gain.depcal=true
-vendor.audio.offload.gapless.enabled=false 
-vendor.audio.offload.multiaac.enable=false 
-vendor.audio.offload.multiple.enabled=false 
-vendor.audio.offload.passthrough=false 
-vendor.audio.offload.track.enable=false 
-debug.stagefright.omx_default_rank=0
 mpq.audio.decode=true
-lpa.decode=false
 audio.decoder_override_check=true
-use.non-omx.mp3.decoder=false
-use.non-omx.aac.decoder=false
-lpa.use-stagefright=false
-lpa.releaselock=false
 vendor.audio.flac.sw.decoder.24bit=true
 vendor.audio.aac.sw.decoder.24bit=true
 vendor.audio.use.sw.alac.decoder=true
@@ -46,8 +26,6 @@ qcom.hw.aac.encoder=true
 audio.hw.aac.decoder=true
 qcom.hw.aac.decoder=true
 persist.audio.format.24bit=true
-ro.qc.sdk.audio.ssr=false 
-ro.vendor.audio.sdk.ssr=false 
 ro.audio.hifi=true
 persist.audio.hifi=true
 persist.audio.hifi.volume=74
@@ -57,38 +35,9 @@ vendor.audio.feature.hifi_audio.enable=true
 ro.vendor.audio.hifi=true
 persist.vendor.audio.hifi.int_codec=true
 ro.hardware.hifi.support=true
-persist.dbg.ims_volte_enable=1
-persist.dbg.volte_avail_ovr=1
-persist.dbg.vt_avail_ovr=1
-persist.dbg.wfc_avail_ovr=1
-persist.radio.rat_on=combine
-persist.radio.data_ltd_sys_ind=1
-persist.radio.data_con_rprt=1
-persist.radio.calls.on.ims=1
-persist.data.iwlan.enable=true 
-persist.vendor.data.iwlan.enable=true
-persist.vendor.radio.add_power_save=1 
-persist.vendor.radio.apm_sim_not_pwdn=1 
-persist.vendor.radio.block_allow_data=1 
-persist.vendor.radio.custom_ecc=1 
-persist.vendor.radio.do_not_use_oprt_db=true 
-persist.vendor.radio.mt_sms_ack=19 
-persist.vendor.radio.multisim.config=dsds 
-persist.vendor.radio.procedure_bytes=SKIP 
-persist.vendor.radio.rat_on=combine 
-persist.vendor.radio.report_codec=1 
-persist.vendor.radio.sib16_support=1 
-persist.vendor.radio.unicode_op_names=true 
-persist.vendor.radio.vdp_on_ims_cap=1 
-persist.vendor.radio.wait_for_pbm=1 
-persist.vendor.sensors.direct_channel=false 
-persist.vendor.service.bdroid.ssrlvl=3 
 persist.service.btui.use_aptx=1
 persist.bt.enableAptXHD=true
-persist.bt.a2dp.aptx_disable=false
-persist.bt.a2dp.aptx_hd_disable=false
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac 
-persist.bluetooth.a2dp_offload.disabled=false 
 persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac 
 persist.vendor.bt.aac_frm_ctl.enabled=true 
 persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac 
@@ -97,12 +46,6 @@ persist.vendor.btstack.enable.twsplus=true
 persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptive 
 persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true 
 persist.vendor.qcom.bluetooth.enable.splita2dp=true 
-persist.vendor.qcom.bluetooth.twsp_state.enabled=false 
-ro.bluetooth.emb_wp_mode=false 
-ro.bluetooth.wipower=false 
-ro.vendor.bluetooth.wipower=false 
-persist.vendor.bt.soc.scram_freqs=192
-persist.bt.a2dp.aac_disable=false
 persist.vendor.bt.aac_frm_ctl.enabled=true
 audio.effect.a2dp.enable=1
 vendor.audio.effect.a2dp.enable=1
@@ -112,30 +55,21 @@ persist.bluetooth.avrcpversion=avrcp16
 persist.vendor.btstack.avrcp.pos_time=1000
 persist.bluetooth.enabledelayreports=true
 vendor.bt.pts.pbap=true
-persist.vendor.bt.a2dp.aac_whitelist=false
 persist.vendor.bt.a2dp.addr_check_enabled_for_aac=true
 persist.audio.lowlatency.rec=true
 audio.safx.pbe.enabled=false
-audio.playback.mch.downsample=false
 effect.reverb.pcm=1
-vendor.audio.playback.mch.downsample=false
-persist.vendor.audio.playback.mch.downsample=false
-vendor.audio.matrix.limiter.enable=0
 persist.vendor.audio.ambisonic.auto.profile=true
-vendor.audio.tunnel.encode=false
-tunnel.audio.encode=false
-qc.tunnel.audio.encode=false
-vendor.av.offload.enable=false
-av.offload.enable=false
-qc.av.offload.enable=false
 ro.audioprofile.more=yes
 persist.sys.media.use-awesome=1
-ro.audio.pcm.samplerate=48000
-audio.deep_buffer.media=false
-vendor.audio.deep_buffer.media=false
-qc.audio.deep_buffer.media=false
-ro.qc.audio.deep_buffer.media=false
-persist.vendor.audio.deep_buffer.media=false
+ro.audio.pcm.samplerate=192000
+ro.audio.samplerate=192000
+persist.htc.audio.pcm.samplerate=192000
+#Awesome Beats Engine
+persist.audio.fluence.mode=endfire
+persist.audio.hp=true
+htc.audio.enable_dmic=1
+persist.htc.audio.pcm.channels=2
 
 # CPU
 ro.vendor.qti.core.ctl.max.cpu=8
@@ -143,7 +77,7 @@ ro.vendor.qti.core.ctl.min.cpu=1
 
 # IMPROVING
 # Improving boot time
-#boot.fps=60
+#boot.fps=60 << Lagging not recomend
 
 # MIUI Feature
 # Power Changer
@@ -159,98 +93,16 @@ ro.vendor.audio.voice.change.support=true
 #196628 is decimal for 0x50000 to report major/minor versions as 5/0
 ro.opengles.version=327680
 
-sys.display-size=3840x2160
-
-#Dalvik
-dalvik.vm.debug.alloc=0
-dalvik.vm.heapstartsize=5m
-dalvik.vm.heapgrowthlimit=48m
-#persist.sys.vm.heapsize= --------
-dalvik.vm.heapsize=128m
-dalvik.vm.heaptargetutilization=0.75
-dalvik.vm.heaputilization=0.25
-dalvik.vm.heapminfree=512k
-dalvik.vm.heapmaxfree=2m
-dalvik.vm.lockprof.threshold=500
-dalvik.vm.dexopt-flags=o=y,m=y,v=n
-dalvik.vm.execution-mode=int:jit
-dalvik.vm.verify-bytecode=true
-dalvik.vm.jmiopts=forcecopy
-persist.sys.dalvik.vm.lib=libdvm.so
-dalvik.vm.stack-trace-file=/data/anr/traces.txt
+sys.display-size=1520x720
 
 #16bit Transparency
 persist.sys.use_16bpp_alpha=1
 
-#Makes streaming videos stream faster
-media.stagefright.enable-player=true
-media.stagefright.enable-meta=true
-media.stagefright.enable-scan=false
-media.stagefright.enable-http=true
-media.stagefright.enable-record=true
-
 #Graphics
 video.accelerate.hw=1
+ro.media.dec.png.memcap=8000000
 ro.media.dec.jpeg.memcap=8000000
 ro.media.enc.hprof.vid.bps=8000000
+ro.media.enc.png.quality=100,100,100
 ro.media.enc.jpeg.quality=100,100,100
-
-#Scrolling Responsiveness
-windowsmgr.max_events_per_sec=180
-
-#Dialing Tweaks
-ro.lge.proximity.delay=25
-mot.proximity.delay=25
-
-#Performance + RAM
-ro.max.fling_velocity=20000
-ro.min.fling_velocity=18000
-ro.secure=0
-ro.min_pointer_dur=1
-persist.sys.purgeable_assets=1
-persist.sys.use_dithering=1
-persist.sys.NV_FPSLIMIT=60
-
-#NetworkLocationProvider and LocationCollector
-ro.com.google.locationfeatures=1
-
-### AC!D Sound Tweaks by TEAM AC!D ###
-ro.audio.samplerate=48000
-persist.audio.vr.enable=false
-persist.htc.audio.pcm.samplerate=48000
-htc.audio.swalt.enable=1
-htc.audio.swalt.mingain=14512
-htc.audio.alc.enable=1
-af.resample=52000
-persist.audio.SupportHTCHWAEC=1
-ro.service.swiqi2.supported=true
-persist.service.swiqi2.enable=1
-
-#Sony Xloud & Clearbass+
-ro.semc.sound_effects_enabled=true
-ro.semc.xloud.supported=true
-persist.service.xloud.enable=1
-ro.semc.enhance.supported=true
-persist.service.enhance.enable=1
-ro.semc.clearaudio.supported=true
-persist.service.clearaudio.enable=1
-ro.sony.walkman.logger=1
-persist.service.walkman.enable=1
-ro.somc.clearphase.supported=true
-persist.service.clearphase.enable=1
-
-#Resampling
-af.resampler.quality=255
-persist.af.resampler.quality=255
-persist.dev.pm.dyn_samplingrate=1
-
-#Awesome Beats Engine
-persist.audio.fluence.mode=endfire
-persist.audio.hp=true
-htc.audio.global.state=0
-htc.audio.lpa.a2dp=0
-htc.audio.global.profile=0
-htc.audio.q6.topology=0
-htc.audio.enable_dmic=1
-persist.htc.audio.pcm.channels=2
 

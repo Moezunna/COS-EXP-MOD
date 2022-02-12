@@ -48,7 +48,16 @@ LATESTARTSERVICE=true
 
 # Set what you want to show when installing your mod
 
-print_modname() {
+TIME=1
+S=V6
+if [ -d /data/adb/modules ]; then
+ SBIN=/data/adb/modules
+elif [ -d /sbin/.core/img ]; then
+ SBIN=/sbin/.core/img
+elif [ -d /sbin/.magisk/img ]; then
+ SBIN=/sbin/.magisk/img
+fi;
+PRINT1() {
   ui_print "۩▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬۩"
   sleep 0
   ui_print "========================================="
@@ -64,6 +73,7 @@ print_modname() {
   ui_print " MagiskVersion=$MAGISK_VER           "
   ui_print " MagiskVersionCode=$MAGISK_VER_CODE  "
   ui_print " Module_Verison=v0.0.1               "
+  ui_print " Status = $S                        "
   ui_print "*************************************"
   ui_print " "
   sleep 5
@@ -138,6 +148,18 @@ echo " "
 sleep 3
 ui_print "Reboot For Perfect Completed!!"
 }
+PRINT2() {
+ui_print "* Enjoy Your New Custom Performance *"
+}
+CHECK1() {
+D=$(getprop ro.product.device 2>/dev/null)
+P=$(getprop ro.build.product 2>/dev/null)
+VD=$(getprop ro.product.vendor.device 2>/dev/null)
+VP=$(getprop ro.vendor.product.device 2>/dev/null)
+DN=whyred
+
+print_modname() {
+
 
 ##########################################################################################
 # Replace list
@@ -159,6 +181,16 @@ REPLACE="
 # Construct your own list here, it will overwrite the example
 # !DO NOT! remove this if you don't need to replace anything, leave it empty as it is now
 REPLACE="
+/sys/kernel/gpu/gpu_available_governor
+/sys/kernel/gpu/gpu_busy
+/sys/kernel/gpu/gpu_clock
+/sys/kernel/gpu/gpu_freq_table
+/sys/kernel/gpu/gpu_governor
+/sys/kernel/gpu/gpu_max_clock
+/sys/kernel/gpu/gpu_min_clock
+/sys/kernel/gpu/gpu_model
+/sys/kernel/gpu/gpu_tmu
+/system/vendor/etc/apdr.conf
 /system/vendor/etc/gps.conf
 /system/vendor/etc/thermal-engine-camera.conf
 /system/vendor/etc/thermal-engine-high.conf
@@ -179,11 +211,22 @@ set_permissions() {
   # Default permissions, don't remove them
   set_perm_recursive  $MODPATH  0  0  0755  0644
 
-  set_perm_recursive $MODPATH/system/vendor/etc/gps.conf 0 0 0755 0644
+  # Permis gpu
+  set_perm_recursive $MODPATH/sys/kernel/gpu 0 0 0755 0777
+  set_perm_recursive $MODPATH/sys/kernel/gpu_available_governor 0 0 0755 0777
+  set_perm_recursive $MODPATH/sys/kernel/gpu_busy 0 0 0755 0777
+  set_perm_recursive $MODPATH/sys/kernel/gpu_clock 0 0 0755 0777
+  set_perm_recursive $MODPATH/sys/kernel/gpu_freq_table 0 0 0755 0777
+  set_perm_recursive $MODPATH/sys/kernel/gpu_governor 0 0 0755 0777
+  set_perm_recursive $MODPATH/sys/kernel/gpu_max_clock 0 0 0755 0777
+  set_perm_recursive $MODPATH/sys/kernel/gpu_min_clock 0 0 0755 0777
+  set_perm_recursive $MODPATH/sys/kernel/gpu_model 0 0 0755 0777
+  set_perm_recursive $MODPATH/sys/kernel/gpu_tmu 0 0 0755 0777
 
   # Permis Thermal
   set_perm_recursive $MODPATH/system/vendor/etc 0 0 0755 0644
   set_perm_recursive $MODPATH/System/vendor/etc/apdr.conf 0 0 0755 0644
+  set_perm_recursive $MODPATH/System/vendor/etc/gps.conf 0 0 0755 0644
   set_perm_recursive $MODPATH/System/vendor/etc/thermal-engine-camera.conf 0 0 0755 0644
   set_perm_recursive $MODPATH/System/vendor/etc/thermal-engine-high.conf 0 0 0755 0644
   set_perm_recursive $MODPATH/System/vendor/etc/thermal-engine-map.conf 0 0 0755 0644
