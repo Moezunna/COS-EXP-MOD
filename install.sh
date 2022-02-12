@@ -52,7 +52,7 @@ print_modname() {
   ui_print "۩▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬۩"
   sleep 0
   ui_print "========================================="
-  ui_print "          COSTUM MODULE BY $MODauthor    ="
+  ui_print "          COSTUM MODULE BY $MODAUTHOR    ="
   ui_print " !!Approximately install only 1 minute!! ="
   ui_print "========================================="
   #Loading
@@ -63,9 +63,9 @@ print_modname() {
   ui_print " name             =$MODNAME          "
   ui_print " MagiskVersion    =$MAGISK_VER       "
   ui_print " MagiskVersionCode=$MAGISK_VER_CODE  "
-  ui_print " Module_Verison   =$MODverison       "
-  ui_print " Min_magisk       =$MODminMagisk     "
-  ui_print " Module_Verison   =$MODdescription   "
+  ui_print " Module_Verison   =$MODVERSION       "
+  ui_print " Min_magisk       =$MODMIN_MAGISK    "
+  ui_print " Module_Verison   =$MODDESCRIPTION   "
   ui_print "*************************************"
   ui_print " "
   sleep 5
