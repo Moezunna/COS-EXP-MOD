@@ -48,16 +48,7 @@ LATESTARTSERVICE=true
 
 # Set what you want to show when installing your mod
 
-TIME=1
-S=V6
-if [ -d /data/adb/modules ]; then
- SBIN=/data/adb/modules
-elif [ -d /sbin/.core/img ]; then
- SBIN=/sbin/.core/img
-elif [ -d /sbin/.magisk/img ]; then
- SBIN=/sbin/.magisk/img
-fi;
-PRINT1() {
+print_modname() {
   ui_print "۩▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬۩"
   sleep 0
   ui_print "========================================="
@@ -73,7 +64,7 @@ PRINT1() {
   ui_print " MagiskVersion=$MAGISK_VER           "
   ui_print " MagiskVersionCode=$MAGISK_VER_CODE  "
   ui_print " Module_Verison=v0.0.1               "
-  ui_print " Status = $S                        "
+  ui_print " Status = $S                         "
   ui_print "*************************************"
   ui_print " "
   sleep 5
@@ -148,18 +139,13 @@ echo " "
 sleep 3
 ui_print "Reboot For Perfect Completed!!"
 }
-PRINT2() {
-ui_print "* Enjoy Your New Custom Performance *"
-}
-CHECK1() {
+
+CHECK() {
 D=$(getprop ro.product.device 2>/dev/null)
 P=$(getprop ro.build.product 2>/dev/null)
 VD=$(getprop ro.product.vendor.device 2>/dev/null)
 VP=$(getprop ro.vendor.product.device 2>/dev/null)
-DN=whyred
-
-print_modname() {
-
+DN=olive
 
 ##########################################################################################
 # Replace list
