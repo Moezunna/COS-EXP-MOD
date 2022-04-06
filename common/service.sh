@@ -48,6 +48,30 @@ echo 'N' > /sys/module/sync/parameters/fsync_enabled
 /system/bin/KFmark
 /system/bin/LMK
 
+chmod 0777 /sys/class/power_supply/bms/temp_cool
+echo 150 > /sys/class/power_supply/bms/temp_cool
+chmod 0644 /sys/class/power_supply/bms/temp_cool
+
+chmod 0777 /sys/class/power_supply/bms/temp_warm
+echo 490 > /sys/class/power_supply/bms/temp_warm
+chmod 0644 /sys/class/power_supply/bms/temp_warm
+
+chmod 0777 /sys/class/power_supply/battery/constant_charge_current_max
+echo 3300000 > /sys/class/power_supply/battery/constant_charge_current_max
+chmod 0644 /sys/class/power_supply/battery/constant_charge_current_max
+
+chmod 0777 /sys/class/power_supply/battery/input_current_limited
+echo 0 > /sys/class/power_supply/battery/input_current_limited
+chmod 0644 /sys/class/power_supply/battery/input_current_limited
+
+chmod 0777 /sys/class/power_supply/battery/step_charging_enabled
+echo 1 > /sys/class/power_supply/battery/step_charging_enabled
+chmod 0644 /sys/class/power_supply/battery/step_charging_enabled
+
+chmod 0777 /sys/class/power_supply/battery/sw_jeita_enabled
+echo 0 > /sys/class/power_supply/battery/sw_jeita_enabled
+chmod 0644 /sys/class/power_supply/battery/sw_jeita_enabled
+
 # Zram add (Work on costum room)
 sleep 15
 echo 4096 >/sys/block/zram0/disksize

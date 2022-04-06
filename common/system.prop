@@ -77,7 +77,7 @@ ro.vendor.qti.core.ctl.min.cpu=1
 
 # IMPROVING
 # Improving boot time
-#boot.fps=60 << Lagging not recomend
+boot.fps=60 << Lagging not recomend
 
 # MIUI Feature
 # Power Changer

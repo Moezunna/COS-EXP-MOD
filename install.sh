@@ -78,6 +78,7 @@ print_modname() {
   ui_print "* -Audio    Set   best  *"
   ui_print "* -Boot     not         *"
   ui_print "* -Camera   Set         *"
+  ui_print "* -Charge   Set 3300mAh *"
   ui_print "* -Cpu      Set control *"
   ui_print "* -Dalvik   not         *"
   ui_print "* -Device   not         *"
@@ -213,6 +214,9 @@ set_permissions() {
   set_perm_recursive $MODPATH/System/vendor/etc/thermal-engine-normal.conf 0 0 0755 0644
   set_perm_recursive $MODPATH/System/vendor/etc/thermal-engine-sgame.conf 0 0 0755 0644
   set_perm_recursive $MODPATH/System/vendor/etc/thermal-engine.conf 0 0 0755 0644
+
+  # Permis graphics
+  set_perm_recursive $MODPATH/sys/class/graphics/dynamic_fps 0 0 0755 0644
 
   # Only some special files require specific permissions
   # The default permissions should be good enough for most cases
